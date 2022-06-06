@@ -26,7 +26,7 @@ export default function App() {
     }
 
     const todoElements = todos.map((todo) => {
-        return <Todo string={todo} />
+        return <Todo string={todo} getTodos={getTodos} key={todo} />
     });
 
     return (
@@ -35,9 +35,11 @@ export default function App() {
             <form onSubmit={
                 e => {
                     e.preventDefault();
-                    if (input) {
+                    if (!todos.includes(input) && input) {
                         setTodos([...todos, input]);
-                    };
+                    } else if (todos.includes(input)) {
+                        alert('Todo already exists');
+                    }
                     e.target.reset();
                     setInput('');
                 }
