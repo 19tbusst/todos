@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import './Todo.scss'
 
 export default function Todo(props) {
     const { string, getTodos } = props;

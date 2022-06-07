@@ -1,0 +1,59 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #333;
+}
+
+.App {
+    color: whitesmoke;
+
+    h1 {
+        margin: 0;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        input[type=text] {
+            width: 100%;
+            padding: 3px;
+            border: none;
+            font-size: 16px;
+            border-bottom: 1px solid whitesmoke;
+            background-color: transparent;
+            color: whitesmoke;
+        }
+
+        button {
+            width: auto;
+            padding: 3px;
+            border: none;
+            font-size: 16px;
+            border-bottom: 1px solid whitesmoke;
+            background-color: transparent;
+            color: whitesmoke;
+        }
+
+        input[type=text],
+        button {
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            color: #aaa
+        }
+
+        button:active {
+            background-color: #444;
+        }
+    }
+}
+
+:focus {
+    outline-color: transparent;
+    outline-style: none;
+}

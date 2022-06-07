@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect, useRef } from 'react';
 import Todo from './Components/Todo';
+import './App.scss'
 
 export default function App() {
     const [input, setInput] = useState('');
@@ -30,7 +31,7 @@ export default function App() {
     });
 
     return (
-        <div>
+        <div className='App'>
             <h1>Todos</h1>
             <form onSubmit={
                 e => {
